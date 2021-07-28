@@ -31,9 +31,30 @@
           <div class="column has-text-centered">
             <h1 class="title">Some of Your Greatest Ideas Started Here</h1><br>
           </div>
+          <button id="archive" class="button is-success" onclick="archiveNotes()">
+            View archived notes
+          </button>
         </div>
         <div id="app" class="columns is-multiline">
           <!-- Note cards will render here -->
+        </div>
+        <div id="editNoteModal" class="modal">
+            <div class="modal-background" ></div>
+            <div class="modal-card">
+                <section class="modal-card-body">
+                    Title: <input class="input is-normal" id="editTitleInput" type="text">
+                    Text: <input class="input is-normal" id="editTextInput" type="text">
+                    <input id="editNoteId" type="hidden">
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success" onclick="saveEditedNote()">
+                    Save Changes
+                    </button>
+                <button class="button" onclick="closeEditModal()">
+                    Cancel
+                </button>
+                </footer>
+            </div>
         </div>
       </div>
     </div>
